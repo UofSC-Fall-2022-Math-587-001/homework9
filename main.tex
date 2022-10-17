@@ -1,0 +1,102 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{stackengine}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue
+}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{caution}[theorem]{Caution}
+
+\begin{document}
+
+\title{Homework}
+
+\maketitle
+
+For this week, please answer the following questions from the text. 
+I've copied the problem itself below and the question numbers for 
+your convenience. 
+
+\begin{enumerate}
+	\item (3.17) The function $\pi(X)$ counts the number of primes between $2$ and $X$. 
+		\begin{enumerate}
+		\item Compue the values of $\pi(20),\pi(30)$, and $\pi(100)$. 
+		\item Write a program to compute $\pi(X)$ and use it to compute $\pi(X)$ and 
+			the ratio $\pi(X)/(X/\ln X)$ for $X = 100, 1000, 10000,$ and $100000$. 
+			Does your list of ratios make the prime number theorem plausible? 
+		\end{enumerate}
+	\item (3.19) We noted in Sect. 3.4 that it really makes no sense to say
+		that the number n has probability $1/\ln n$ of being prime. Any
+		particular number that you choose either will be prime or will
+		not be prime; there are no numbers that are 35 \% prime and 65 \%
+		composite! In this exercise you will prove a result that gives
+		a more sensible meaning to the statement that a number has a
+		certain probability of being prime. You may use the prime
+		number theorem (Theorem 3.21) for this problem.
+		\begin{enumerate}
+			\item Fix a (large) number N and suppose that Bob
+			chooses a random number $n$ in the interval $N/2
+			\leq n \leq 3N/2$ . If he repeats this process many
+			times, prove that approximately $1/\ln N$ of his
+			numbers will be prime. More precisely, define
+			\begin{align*}
+				P(N) & := \frac{\text{number of primes between $N/2$ and 
+					$3N/2$}}{\text{number of integers between $N/2$ 
+					and $3N/2$}} \\
+				     & = \left[\Centerstack{\text{Probability that a random integer $n$ 
+			     in the interval} \newline \text{$N/2 \leq n \leq 3N/2$ is a prime number}} \right]
+			\end{align*}
+			and prove that 
+			\begin{displaymath}
+				\lim_{N \to \infty} \frac{P(N)}{1/\ln N} = 1
+			\end{displaymath}
+			\item More generally, fix two numbers $c_1$ and $c_2$ satisfying $c_1 > 
+				c_2 > 0$. Bob chooses random numbers $n$ in the interval 
+				$c_1 N \leq n \leq c_2 N$. Keeping $c_1$ and $c_2$ fixed, let 
+			\begin{displaymath}
+				P(c_1,c_2;N) := \left[\Centerstack{\text{Probablity that an integer 
+					$n$ in the interval} \newline \text{$c_1N \leq n \leq 
+					c_2 N$ is a prime number}}\right]
+			\end{displaymath}
+			In the following formula, fill in the gox with a simple function of $N$ 
+			so that the statement is true. 
+			\begin{displaymath}
+				\lim_{N \to \infty} \frac{P(c_1,c_2;N)}{\framebox(3em,1.5em){}} = 1. 
+			\end{displaymath}
+		\end{enumerate}
+	\item (3.23) A prime of the form $2^n-1$ is called a \textit{Mersenne prime}. 
+		\begin{enumerate}
+			\item Factor each of the numbers $2^n-1$ for $n=2,3,\ldots,10$. Which ones 
+				are Mersenne primes?
+			\item Find the first seven Mersenne primes. (You may need a computer.)
+			\item If $n$ is even and $n > 2$, prove that $2^n-1$ is not prime.
+			\item If $3 \mid n$ and $n > 3$, prove that $2^n-1$ is not prime.
+			\item More generally, prove that if $n$ is a composite number, then 
+				$2^n-1$ is not prime. Thus all Mersenne primes have the form 
+				$2^p-1$ with $p$ a prime number. 
+			\item What is the largest known Mersenne prime? Are there any larger 
+				primes known? (You can find out at the "Great Internet Mersenne 
+				Prime Search" web site \url{www.mersenne.org/prime.htm}.)
+		\end{enumerate}
+			
+			
+\end{enumerate}
+\end{document}
