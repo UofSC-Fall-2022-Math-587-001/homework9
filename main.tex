@@ -36,67 +36,151 @@ I've copied the problem itself below and the question numbers for
 your convenience. 
 
 \begin{enumerate}
-	\item (3.17) The function $\pi(X)$ counts the number of primes between $2$ and $X$. 
+	\item (3.24) For each of the following numbers $N$, compute 
+		the values of 
+	\begin{displaymath}
+		N+1^2,N+2^2,N+3^2,N+4^2,\ldots 
+	\end{displaymath}
+	as we did in Example 3.34 until you find a value $N+b^2$ that 
+	is a perfect square $a^2$. Then the use the values of $a$ and 
+	$b$ to factor $N$.
+	\begin{enumerate}
+		\item $N = 53357$
+		\item $N = 34571$
+		\item $N = 25777$
+		\item $N = 64213$
+	\end{enumerate}
+
+	\item (3.26) For each part, use the data provided to find the 
+		values of $a$ and $b$ satisfying $a^2 = b^2 \mod n$, and 
+		then compute $\operatorname{gcd}(N,a-b)$ in order to 
+		find a nontrivial factor of $N$, as we did in Examples 
+		3.37 and 3.38.
+	\begin{enumerate}
+		\item $N = 61063$ 
+		\begin{alignat*}{3}
+			1882^2 & = 270 \mod 61063~ && \operatorname{and}~
+			270 && = 2 \cdot 3^3 \cdot 5 \\
+			1898^2 & = 60750 \mod 61063~ && \operatorname{and}~ 
+			60750 && = 2 \cdot 3^5 \cdot 5^3  \\
+		\end{alignat*}
+		\item $N = 52907$
+		\begin{alignat*}{3}
+			399^2 & = 480 \mod 52907~ && \operatorname{and}~
+			480 && = 2^5 \cdot 3 \cdot 5 \\
+			763^2 & = 192 \mod 52907~ && \operatorname{and}~
+			192 && = 2^6 \cdot 3 \\ 
+			773^2 & = 15552 \mod 52907~ && \operatorname{and}~
+			15552 && = 2^6 \cdot 3^5 \\
+			976^2 & = 250 \mod 52907~ && \operatorname{and}~
+			250 && = 2 \cdot 5^3 
+		\end{alignat*}
+		\item $N = 198103$
+		\begin{alignat*}{3}
+			1189^2 & = 27000 \mod 198103~ && \operatorname{and}~
+			27000 && = 2^3 \cdot 3^3 \cdot 5^3 \\
+			1605^2 & = 686 \mod 198103~ && \operatorname{and}~
+			686 && = 2 \cdot 7 \\ 
+			2378^2 & = 108000 \mod 198103~ && \operatorname{and}~
+			108000 && = 2^5 \cdot 3^3 \cdot 5^3 \\
+			2815^2 & = 105 \mod 198103~ && \operatorname{and}~
+			105 && = 3 \cdot 5 \cdot 7
+		\end{alignat*}
+		\item $N = 2525891$
+		\begin{alignat*}{3}
+			1591^2 & = 5390 \mod 2525891~ && \operatorname{and}~
+			5390 && = 2 \cdot 5 \cdot 7^2 \cdot 11 \\
+			3182^2 & = 21560 \mod 2525891~ && \operatorname{and}~
+			21560 && = 2^3 \cdot 5 \cdot 7^2 \cdot 11 \\ 
+			4773^2 & = 108000 \mod 2525891~ && \operatorname{and}~
+			108000 && = 2^5 \cdot 3^3 \cdot 5^3 \\
+			2815^2 & = 105 \mod 2525891~ && \operatorname{and}~
+			105 && = 3 \cdot 5 \cdot 7
+		\end{alignat*}
+			
+	\end{enumerate}
+		
+
 		\begin{enumerate}
-		\item Compue the values of $\pi(20),\pi(30)$, and $\pi(100)$. 
-		\item Write a program to compute $\pi(X)$ and use it to compute $\pi(X)$ and 
-			the ratio $\pi(X)/(X/\ln X)$ for $X = 100, 1000, 10000,$ and $100000$. 
-			Does your list of ratios make the prime number theorem plausible? 
+			\item $N = 61063$ 
+			\begin{alignat*}{3}
+				1882^2 & = 270 \mod 61063~ && \operatorname{and}~
+				270 && = 2 \cdot 3^3 \cdot 5 \\
+				1898^2 & = 60750 \mod 61063~ && \operatorname{and}~ 
+				60750 && = 2 \cdot 3^5 \cdot 5^3  \\
+			\end{alignat*}
+			\item $N = 52907$
+			\begin{alignat*}{3}
+				399^2 & = 480 \mod 52907~ && \operatorname{and}~
+				480 && = 2^5 \cdot 3 \cdot 5 \\
+				763^2 & = 192 \mod 52907~ && \operatorname{and}~
+				192 && = 2^6 \cdot 3 \\ 
+				773^2 & = 15552 \mod 52907~ && \operatorname{and}~
+				15552 && = 2^6 \cdot 3^5 \\
+				976^2 & = 250 \mod 52907~ && \operatorname{and}~
+				250 && = 2 \cdot 5^3 
+			\end{alignat*}
+			\item $N = 198103$
+			\begin{alignat*}{3}
+				1189^2 & = 27000 \mod 198103~ && \operatorname{and}~
+				27000 && = 2^3 \cdot 3^3 \cdot 5^3 \\
+				1605^2 & = 686 \mod 198103~ && \operatorname{and}~
+				686 && = 2 \cdot 7^3 \\ 
+				2378^2 & = 108000 \mod 198103~ && \operatorname{and}~
+				108000 && = 2^5 \cdot 3^3 \cdot 5^3 \\
+				2815^2 & = 105 \mod 198103~ && \operatorname{and}~
+				105 && = 3 \cdot 5 \cdot 7
+			\end{alignat*}
+			\item $N = 2525891$
+			\begin{alignat*}{3}
+				1591^2 & = 5390 \mod 2525891~ && \operatorname{and}~
+				5390 && = 2 \cdot 5 \cdot 7^2 \cdot 11 \\
+				3182^2 & = 21560 \mod 2525891~ && \operatorname{and}~
+				21560 && = 2^3 \cdot 5 \cdot 7^2 \cdot 11 \\ 
+				4773^2 & = 48510 \mod 2525891~ && \operatorname{and}~
+				48510 && = 2 \cdot 3^2 \cdot 5 \cdot 7^2 \cdot 11 \\
+				5275^2 & = 40824 \mod 2525891~ && \operatorname{and}~
+				40824 && = 2^3 \cdot 3^6 \cdot 7 \\
+				5401^2 & = 1386000 \mod 2525891~ && \operatorname{and}~
+				1386000 && = 2^4 \cdot 3^2 \cdot 5^3 \cdot 7 \cdot 11 \\
+			\end{alignat*}
 		\end{enumerate}
-	\item (3.19) We noted in Sect. 3.4 that it really makes no sense to say
-		that the number n has probability $1/\ln n$ of being prime. Any
-		particular number that you choose either will be prime or will
-		not be prime; there are no numbers that are 35 \% prime and 65 \%
-		composite! In this exercise you will prove a result that gives
-		a more sensible meaning to the statement that a number has a
-		certain probability of being prime. You may use the prime
-		number theorem (Theorem 3.21) for this problem.
+	\item (3.27) Compute the followimg values of $\psi(X,B)$, the number of $B$-smooth 
+		numbers between $2$ and $X$ (see page 150).
 		\begin{enumerate}
-			\item Fix a (large) number N and suppose that Bob
-			chooses a random number $n$ in the interval $N/2
-			\leq n \leq 3N/2$ . If he repeats this process many
-			times, prove that approximately $1/\ln N$ of his
-			numbers will be prime. More precisely, define
-			\begin{align*}
-				P(N) & := \frac{\text{number of primes between $N/2$ and 
-					$3N/2$}}{\text{number of integers between $N/2$ 
-					and $3N/2$}} \\
-				     & = \left[\Centerstack{\text{Probability that a random integer $n$ 
-			     in the interval} \newline \text{$N/2 \leq n \leq 3N/2$ is a prime number}} \right]
-			\end{align*}
-			and prove that 
-			\begin{displaymath}
-				\lim_{N \to \infty} \frac{P(N)}{1/\ln N} = 1
-			\end{displaymath}
-			\item More generally, fix two numbers $c_1$ and $c_2$ satisfying $c_1 > 
-				c_2 > 0$. Bob chooses random numbers $n$ in the interval 
-				$c_1 N \leq n \leq c_2 N$. Keeping $c_1$ and $c_2$ fixed, let 
-			\begin{displaymath}
-				P(c_1,c_2;N) := \left[\Centerstack{\text{Probablity that an integer 
-					$n$ in the interval} \newline \text{$c_1N \leq n \leq 
-					c_2 N$ is a prime number}}\right]
-			\end{displaymath}
-			In the following formula, fill in the gox with a simple function of $N$ 
-			so that the statement is true. 
-			\begin{displaymath}
-				\lim_{N \to \infty} \frac{P(c_1,c_2;N)}{\framebox(3em,1.5em){}} = 1. 
-			\end{displaymath}
+			\item $\psi(25,3)$
+			\item $\psi(35,5)$
+			\item $\psi(50,7)$
+			\item $\psi(100,5)$
+			\item $\psi(100,7)$
 		\end{enumerate}
-	\item (3.23) A prime of the form $2^n-1$ is called a \textit{Mersenne prime}. 
+
+	\item (3.34) Illustrate the quadratic sieve, as was down in Fig. 3.3 (page 161), 
+		by sieving prime powers up to $B$ on the values of $F(T) = T^2 - N$ in 
+		the indicated range.
 		\begin{enumerate}
-			\item Factor each of the numbers $2^n-1$ for $n=2,3,\ldots,10$. Which ones 
-				are Mersenne primes?
-			\item Find the first seven Mersenne primes. (You may need a computer.)
-			\item If $n$ is even and $n > 2$, prove that $2^n-1$ is not prime.
-			\item If $3 \mid n$ and $n > 3$, prove that $2^n-1$ is not prime.
-			\item More generally, prove that if $n$ is a composite number, then 
-				$2^n-1$ is not prime. Thus all Mersenne primes have the form 
-				$2^p-1$ with $p$ a prime number. 
-			\item What is the largest known Mersenne prime? Are there any larger 
-				primes known? (You can find out at the "Great Internet Mersenne 
-				Prime Search" web site \url{www.mersenne.org/prime.htm}.)
+			\item Sieve $N=493$ using prime powers up to $B=11$ on values 
+				from $F(23)$ to $F(38)$. Use the relation(s) that you 
+				find to factor $N$. 
+			\item Extend the computation in (a) by using prime powers up 
+				to $B=16$ and sieving values from $F(23)$ to $F(50)$. 
+				What additional value(s) are sieved down to $1$ and 
+				what additional relation(n) do they yield? 
 		\end{enumerate}
 			
+	\item (3.35) Let $\mathbb{Z}[\beta]$ be the ring described in Example 3.55, i.e. 
+		$\beta$ is a root of $f(x) = 1 + 3x - 2x^3 + x^4$. For each of the 
+		following pairs of elements $u,v \in \mathbb{Z}[\beta]$, compute 
+		the sum $u + v$ and the product $uv$. Your answers should only involve 
+		powers of $\beta$ up to $\beta^3$. 
+		\begin{enumerate}
+			\item $u = -5-2\beta+9\beta^2-9\beta^3$ and $v=2+9\beta-7
+				\beta + 7 \beta^2$.
+			\item $u = 9 + 9\beta + 6\beta^2 - 5\beta^3$ and $v = -4 
+				- 6\beta - 2\beta^2 -5 \beta^3$.
+			\item $u = 6 - 5\beta + 3\beta^2 + 3 \beta^3$ and $v = -2 
+				+ 7\beta + 6\beta^2$. 
+		\end{enumerate}
 			
 \end{enumerate}
 \end{document}

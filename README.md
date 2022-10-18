@@ -1,4 +1,4 @@
-## Homework 8
+## Homework 9
 
 This week we have a written part and an implementation part. 
 
@@ -15,4 +15,4 @@ Note: when you submit, your filename must be `solutions.pdf` and it must be a pd
 
 ### Implementation part 
 
-Implement Pollard's p-1 test. 
+Write a program to compute the B-smooth numbers up to a given N. 
